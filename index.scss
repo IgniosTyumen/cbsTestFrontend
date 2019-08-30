@@ -1,0 +1,331 @@
+$color-black: #000;
+$color-blue: #0c74e2;
+$color-gray:#dcdcdc;
+$color-white:#fff;
+body{
+  font-family: "Open Sans", sans-serif;
+  color: $color-black;
+}
+
+.hidden{
+  display: none;
+}
+
+.modal-area{
+  position: fixed;
+  width: 960px;
+  height: 500px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 4px solid $color-blue;
+
+  &__controls{
+    margin-top: 28px;
+    margin-bottom: 30px;
+
+    .nav-item{
+      width: 30%;
+      max-width: 180px;
+      margin-right: 11px;
+      border-radius: 5px;
+
+      &:first-child{
+        margin-left: 34px;
+      }
+
+
+      .nav-link {
+        background-color: $color-gray;
+        color: $color-blue;
+        font-size: 14px;
+        line-height: 38px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & svg{
+          fill: $color-blue;
+        }
+
+        &.active {
+          background-color: $color-blue;
+          color: $color-white;
+
+          & svg {
+            fill: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  &__filters{
+    display: flex;
+    width: 100%;
+    height: 310px;
+
+    .container{
+        padding-right: 26px;
+        padding-left: 26px;
+    }
+
+    .custom-control{
+      padding-left: 0;
+
+      &-label::before{
+        border: 1px solid $color-gray;
+        border-radius: 1px;
+        left: 10px;
+      }
+
+      &-label::after{
+        left: 10px;
+      }
+
+    }
+
+    .custom-control-input:checked~.custom-control-label::before{
+      background-color: $color-white;
+      border: 1px solid $color-gray;
+      transition: none;
+    }
+
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+      background-image: url(../assets/check-symbol.png);
+    }
+
+    & h3{
+      font-size: 16px;
+    }
+
+    & input[type=text]{
+      padding-left: 10px;
+    }
+
+    & input[type=text]::placeholder{
+      padding-left: 10px;
+    }
+  }
+
+  &__track-filter{
+
+    &--search{
+      height: 30px;
+      width: 210px;
+      border: 1px solid $color-gray;
+    }
+
+    &--data{
+      border: 1px solid $color-gray;
+      height: 250px;
+      width: 210px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar{
+        width: 14px;
+        background-color: $color-gray;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-blue;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      &-item{
+          margin-top: 15px;
+          margin-bottom: 15px;
+      }
+
+      &-text{
+        font-size: 14px;
+        padding-left: 30px;
+        font-weight: 500;
+      }
+
+      &-offers{
+        position: absolute;
+        right: 5px;
+        color: $color-blue;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__areas-filter{
+
+    &--search{
+      height: 30px;
+      width: 210px;
+      border: 1px solid $color-gray;
+    }
+
+    &--data{
+      border: 1px solid $color-gray;
+      height: 250px;
+      width: 210px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar{
+        width: 14px;
+        background-color: $color-gray;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-blue;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+
+      &-item{
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      &-text{
+        font-size: 14px;
+        padding-left: 30px;
+        font-weight: 500;
+      }
+
+      &-offers{
+        position: absolute;
+        right: 5px;
+        color: $color-blue;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__dachas-filter{
+
+    &--search{
+      height: 30px;
+      width: 210px;
+      border: 1px solid $color-gray;
+    }
+
+    &--data{
+      border: 1px solid $color-gray;
+      height: 250px;
+      width: 210px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar{
+        width: 14px;
+        background-color: $color-gray;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-blue;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      &-text{
+        font-size: 14px;
+        padding-left: 30px;
+        font-weight: 500;
+      }
+
+      &-item{
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      &-offers{
+        position: absolute;
+        right: 5px;
+        color: $color-blue;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__chalets-filter{
+
+    &--search{
+      height: 30px;
+      width: 210px;
+      border: 1px solid $color-gray;
+    }
+
+    &--data{
+      border: 1px solid $color-gray;
+      height: 250px;
+      width: 210px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar{
+        width: 14px;
+        background-color: $color-gray;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-blue;
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+      }
+
+      &-item{
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      &-text{
+        font-size: 14px;
+        padding-left: 30px;
+        font-weight: 500;
+      }
+
+      &-offers{
+        position: absolute;
+        right: 5px;
+        color: $color-blue;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__form-btn{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 16px;
+    margin-bottom: 23px;
+
+    .btn{
+      width: 210px;
+      height: 40px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &--accept{
+      background-color: $color-blue;
+      color: $color-white;
+      margin-right: 26px;
+    }
+
+    &--reset{
+      background-color: $color-white;
+      color: $color-blue;
+      border-radius: 2px solid $color-blue;
+      margin-right: 20px;
+    }
+
+
+  }
+}
+

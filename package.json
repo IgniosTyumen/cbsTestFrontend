@@ -1,0 +1,20 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "test tasc for cds",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass index.scss css/index.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "handlebars": "^4.1.2",
+    "jquery": "^3.4.1",
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
